@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var a = 1;
+            var p = 0;
+            function pie() {
+                for(var i = 0; i < 100000; i++) {
+                    for(var i = 0; i < 100000; i++) {
+                        p += 1/a;
+                        a += 2;
+                        p -= 1/a;
+                        a += 2;
+                        document.getElementById('pie_display').textContent = p*4
+                    }
+                }
+            }
+        </script>
+        <center>
+            <input type='button' name='btn' value="파이 구하기 시작" onclick="pie()">
+            <p id='pie_display'>
+            </p>
+        </center>
+    </body>
+</html>
